@@ -1,0 +1,45 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "setuptools>=61"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "p99"
+version = "0.1.1"
+description = "Low-cost performance percentile histogram"
+readme = "README.md"
+license = "BSD-3-Clause"
+requires-python = ">=3.9"
+authors = [
+    { name = "Matthew Wilson", email = "matthew@synesis.com.au" },
+]
+keywords = ["histogram", "percentile", "latency", "p99", "performance"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/synesissoftware/p99.Python"
+Repository = "https://github.com/synesissoftware/p99.Python"
+
+[tool.scikit-build]
+wheel.packages = ["src/p99"]
+minimum-version = "0.10"
+cmake.version = ">=3.16"
+cmake.source-dir = "."
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
