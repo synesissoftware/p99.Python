@@ -1,0 +1,37 @@
+
+# directories (by name)
+
+/.bin/
+/.pytest_cache/
+/.ruff_cache/
+/.venv/
+
+build/
+dist/
+dist-old/
+scratch/
+
+*.egg-info/
+
+
+# directories (by pattern)
+
+**/__pycache__/
+
+
+# files (by name)
+
+.DS_Store
+
+notes.txt
+
+
+# files (by pattern)
+
+*~
+*.pyc
+*.pyo
+*.swo
+*.swp
+*.tmp
+*.zip
